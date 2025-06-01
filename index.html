@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="sq">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FitLife - Jeto Shëndetshëm</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+   <header>
+  <nav class="navbar">
+    <a href="#home" class="logo">
+      <img src="logo.png" alt="FitLife Logo" />
+    </a>
+    <div class="logo"></div>
+
+    <ul class="nav-main">
+      <li><a href="#hero">Ballina</a></li>
+      <li><a href="#rrethNesh">Rreth Nesh</a></li>
+      <li><a href="#faqSection">Pyetje të Shpeshta</a></li>
+      <li><a href="#dailyTips">Këshilla Ditore</a></li>
+      <li><a href="#blog">Blog</a></li>
+
+
+      <li class="dropdown">
+        <button id="dropdown-btn">Më shumë ▼</button>
+        <div class="dropdown-content" id="dropdown-content">
+          <ul>
+            <li><a href="#waterTracker">Uji</a></li>
+            <li><a href="#calorieCalculator">Kaloritë</a></li>
+            <li><a href="#bmi">BMI</a></li>
+            <li><a href="#weeklyMealPlan">Plani Ushqimor</a></li>
+            <li><a href="#healthyDrinks">Pije të Shëndetshme</a></li>
+            <li><a href="#progressTracker">Progresi</a></li>
+            <li><a href="#dietSection">Dietat Popullore</a></li>
+            <li><a href="#fitness">Ushtrimet</a></li>
+            <li><a href="#healthDiets">Dieta për Gjendje</a></li>
+            <li><a href="#vitaminsMinerals">Vitamina & Minerale</a></li>
+            <li><a href="#dietHistory">Historia e Dietës</a></li>
+             <li><a href="#receta">Receta të Shëndetshme</a></li>
+          </ul>
+        </div>
+      </li>
+    </ul>
+  </nav>
+</header>
+
+
+
+    <!-- HERO SECTION -->
+
+  <section class="hero">
+    
+    <p>Mirë se vini në FitLife - platforma juaj për një jetë aktive dhe të shëndetshme!</p>
+  </section>
+<section class="motivational-section">
+  <p class="motivational-text">
+    "Çdo ditë është një mundësi e re për të përmirësuar veten.  
+    Nuk ka rëndësi ku ke qenë dje, por ku po shkon sot.  
+    Ushtrimet dhe ushqimi i shëndetshëm nuk janë vetëm për trupin — janë për mendjen dhe shpirtin.  
+    Kujdesu për veten siç do doje dikë që e do.  
+    Vetëm me durim dhe përkushtim arrihen rezultatet më të bukura.  
+    Mos harro, ti je më i fortë sesa çdo sfidë që të del përpara."
+  </p>
+</section>
+
+
+  
+   <!-- Gjurmuesi i Ujit -->
+ <section id="waterTracker" class="section">
+  <h2>Gjurmuesi i Ujit</h2>
+  <p>Sasia e ujit që keni pirë sot: <span id="waterAmount">0</span> litra</p>
+  <button id="addWater">Shto 0.25 L</button>
+  <button id="resetWater">Reset</button>
+</section>
+
+<!-- Kalkulator Kalorish -->
+  <section id="calorieCalculator" class="section">
+  <h2>Kalkulo Nevojat Ditore të Kalorive</h2>
+  <input type="number" id="age" placeholder="Mosha"  />
+  <input type="number" id="weightCal" placeholder="Pesha (kg)"  />
+  <input type="number" id="heightCal" placeholder="Gjatësia (cm)" />
+  <select id="gender">
+    <option value="">Zgjidh Gjininë</option>
+    <option value="male">Mashkull</option>
+    <option value="female">Femër</option>
+  </select>
+
+  <select id="activityLevel" >
+    <option value="1.2">Jetë sedentare</option>
+    <option value="1.375">Aktivitet i lehtë</option>
+    <option value="1.55">Aktivitet i moderuar</option>
+    <option value="1.725">Aktivitet i rëndë</option>
+  </select>
+  <button id="calculateCaloriesBtn">Llogarit Kaloritë</button>
+  <p id="calorieResult">Rezultati do të shfaqet këtu.</p>
+</section>
+
+<!-- Kalkulator BMI -->
+  <section id="bmi" class="section">
+  <h2>Llogarit BMI</h2>
+  <input type="number" id="weight" placeholder="Pesha (kg)" />
+  <input type="number" id="height" placeholder="Gjatësia (cm)" />
+  <button id="calculateBtn">Llogarit</button>
+  <p id="bmi-result">Rezultati do të shfaqet këtu.</p>
+</section>
+<!-- Plani javor  -->
+<section id="weeklyMealPlan" class="section">
+<section id="weeklyMealPlan" class="section"></section>
+  <h2>Plani Javor i Ushqimeve</h2>
+  <div class="week-days">
+
+    <div class="day-card">
+      <h3>E Hënë</h3>
+      <ul>
+        <li><strong>Mëngjes:</strong> Tost me avokado – <em>250 kcal</em></li>
+        <li><strong>Drekë:</strong> Peshk me perime – <em>450 kcal</em></li>
+        <li><strong>Darkë:</strong> Supë brokoli – <em>300 kcal</em></li>
+        <li><strong>Snacks:</strong> Fruta të thata – <em>150 kcal</em></li>
+      </ul>
+      <button class="select-day">Select</button>
+    </div>
+
+    <div class="day-card">
+      <h3>E Martë</h3>
+      <ul>
+        <li><strong>Mëngjes:</strong> Omletë me spinaq – <em>280 kcal</em></li>
+        <li><strong>Drekë:</strong> Sallatë me quinoa – <em>420 kcal</em></li>
+        <li><strong>Darkë:</strong> Kuskus me kërpudha – <em>350 kcal</em></li>
+        <li><strong>Snacks:</strong> Kos me mjaltë – <em>120 kcal</em></li>
+      </ul>
+      <button class="select-day">Select</button>
+    </div>
+
+    <div class="day-card">
+      <h3>E Mërkurë</h3>
+      <ul>
+        <li><strong>Mëngjes:</strong> Smoothie me fruta – <em>300 kcal</em></li>
+        <li><strong>Drekë:</strong> Oriz integral me perime – <em>400 kcal</em></li>
+        <li><strong>Darkë:</strong> Sallatë greke – <em>280 kcal</em></li>
+        <li><strong>Snacks:</strong> Karrota dhe humus – <em>100 kcal</em></li>
+      </ul>
+      <button class="select-day">Select</button>
+    </div>
+
+    <div class="day-card">
+      <h3>E Enjte</h3>
+      <ul>
+        <li><strong>Mëngjes:</strong> Tërshërë me fruta – <em>270 kcal</em></li>
+        <li><strong>Drekë:</strong> Fileto pule me brokoli – <em>430 kcal</em></li>
+        <li><strong>Darkë:</strong> Supë me thjerrëza – <em>290 kcal</em></li>
+        <li><strong>Snacks:</strong> Molla me gjalpë kikiriku – <em>130 kcal</em></li>
+      </ul>
+      <button class="select-day">Select</button>
+    </div>
+
+    <div class="day-card">
+      <h3>E Premte</h3>
+      <ul>
+        <li><strong>Mëngjes:</strong> Bukë integrale me vezë – <em>310 kcal</em></li>
+        <li><strong>Drekë:</strong> Pjata me lazanje vegjetariane – <em>470 kcal</em></li>
+        <li><strong>Darkë:</strong> Sallatë me ton – <em>300 kcal</em></li>
+        <li><strong>Snacks:</strong> Kos me fara chia – <em>120 kcal</em></li>
+      </ul>
+      <button class="select-day">Select</button>
+    </div>
+
+    <div class="day-card">
+      <h3>E Shtunë</h3>
+      <ul>
+        <li><strong>Mëngjes:</strong> Palaçinka me banane – <em>320 kcal</em></li>
+        <li><strong>Drekë:</strong> Qofte vegjetariane me sallatë – <em>450 kcal</em></li>
+        <li><strong>Darkë:</strong> Supë me oriz dhe perime – <em>280 kcal</em></li>
+        <li><strong>Snacks:</strong> Fëstëkë – <em>100 kcal</em></li>
+      </ul>
+      <button class="select-day">Select</button>
+    </div>
+
+    <div class="day-card">
+      <h3>E Diel</h3>
+      <ul>
+        <li><strong>Mëngjes:</strong> Fruta të freskëta me kos – <em>260 kcal</em></li>
+        <li><strong>Drekë:</strong> Pjata me oriz kafe dhe peshk – <em>480 kcal</em></li>
+        <li><strong>Darkë:</strong> Pure patate me perime – <em>310 kcal</em></li>
+        <li><strong>Snacks:</strong> Boronica – <em>90 kcal</em></li>
+      </ul>
+      <button class="select-day">Select</button>
+    </div>
+
+  </div>
+</section>
+
+  <!-- Gjurmuesi i Progresit -->
+  <section id="progressTracker" class="section">
+    <h2>Gjurmuesi i Progresit</h2>
+    <table id="progressTable" border="1" cellpadding="5" cellspacing="0">
+      <thead>
+        <tr>
+          <th>Data</th>
+          <th>Pesha (kg)</th>
+          <th>BMI</th>
+          <th>Vëzhgime</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Rreshtat do shtohen me JS -->
+      </tbody>
+    </table>
+    <canvas id="progressChart" width="400" height="200"></canvas>
+  </section>
+
+  
+
+  
+
+  <!-- Ushtrime -->
+  <section id="fitness" class="section">
+  <h2 class="section-title">Ushtrime të rekomanduara</h2>
+  <div class="more-text" style="display: none;">
+    <div id="exerciseContainer">
+      <div class="exercise-item"><img src="images/push-up-tall.jpg" alt="Push-ups" /><p>Push-ups (Pompa)</p></div>
+      <div class="exercise-item"><img src="images/squat.jpg" alt="Squats" /><p>Squats</p></div>
+      <div class="exercise-item"><img src="images/lunges.jpg" alt="Lunges" /><p>Lunges (Hapat përpara)</p></div>
+      <div class="exercise-item"><img src="images/jumping-jack.jpg" alt="Jumping Jack" /><p>Jumping Jacks (Hapa kërcimi)</p></div>
+      <div class="exercise-item"><img src="images/Burpees.jpg" alt="Burpees" /><p>Burpees</p></div>
+      <div class="exercise-item"><img src="images/mountain-climber.jpg" alt="Mountain Climbers" /><p>Mountain Climbers</p></div>
+      <div class="exercise-item"><img src="images/crunch-muscles.jpg" alt="Crunches" /><p>Crunches (Abdominale)</p></div>
+    </div>
+  </div>
+  <button class="read-more">Mëso më shumë</button>
+</section>
+
+  <!-- Dietat Popullore -->
+<section id="dietSection" class="section">
+  <h2>Dietat Popullore</h2>
+
+  <!-- Përshkrimi i përgjithshëm që shfaqet gjithmonë -->
+  <p>Zbuloni dietat më të njohura dhe efektive për një jetë të shëndetshme dhe energjike.</p>
+
+  <!-- Teksti i detajuar, fshehur fillimisht -->
+  <p class="details" style="display:none;">
+    <strong>Dieta Mesdhetare</strong> njihet për përfitimet e saj kardiovaskulare dhe jetëgjatësinë, duke përfshirë shumë ushqime të freskëta dhe të papërpunuara.
+    Keto promovon përdorimin e yndyrnave si burim kryesor energjie duke kufizuar karbohidratet për të nxitur humbjen e peshës.<br><br>
+    <strong>Dieta Paleo</strong>  përqendrohet në konsumimin e ushqimeve të ngjashme me ato që konsumoheshin nga parardhësit tanë, duke eliminuar ushqimet industriale.
+    Dieta Vegane përjashton të gjitha produktet shtazore dhe është e bazuar plotësisht në burime bimore për një stil jetese të qëndrueshëm.<br><br>
+  </p>  
+
+
+
+  <!-- Butoni për toggle -->
+  <button class="read-more">Mëso më shumë</button>
+</section>
+  <section id="healthyDrinks" class="section">
+  <h2>Pije të Shëndetshme</h2>
+  <ul class="drink-list">
+    <li>
+  <strong>Ujë me limon</strong>
+  <p class="more-text" style="display: none;">
+    Uji me limon ndihmon në detoksifikim, përmirëson tretjen dhe rrit nivelin e vitaminës C.
+  </p>
+  <button class="read-more">Mëso më shumë</button>
+</li>
+
+    <li>
+      <strong>Çaj jeshil</strong>
+      <p class="more text" style="display:none;">
+      Rrit metabolizmin: Çaji jeshil përmban katekinë dhe kafeinë, që stimulojnë metabolizmin dhe ndihmojnë trupin të djegë më shumë kalori, madje edhe në pushim.
+Nxit djegien e yndyrës: Studimet tregojnë që çaji jeshil ndihmon në shkrirjen e yndyrës, sidomos yndyrën e barkut, duke përmirësuar përbërjen trupore.
+Ndihmon në kontrollin e oreksit: Disa njerëz ndjejnë më pak uri pasi pijnë çaj jeshil, gjë që mund të ndihmojë në ngrënie më të kontrolluar dhe shmangien e ushqimeve të tepërta.</p>
+      <button class="read-more">Mëso më shumë</button>
+</li>
+    <li>
+      <strong>Smoothie me fruta</strong>
+      <p class="more text" style="display:none;">
+      Smoothiet me fruta janë një mënyrë e shkëlqyer për të marrë energji dhe vitamina gjatë dietës. 
+      Përgatiten lehtë duke përdorur fruta të freskëta si banane dhe manaferra, të cilat përzihen me kos natyral ose jogurt grek dhe pak qumësht. 
+      Për më shumë shije dhe ëmbëlsi mund të shtosh mjaltë ose shurup agave. Nëse dëshiron që smoothie të jetë më i freskët, mund të shtosh edhe pak akull.
+       Ky pije është i pasur me fibra dhe proteina, dhe ndihmon në kontrollin e oreksit dhe energjinë gjatë ditës. Për të përmirësuar vlerat ushqyese, mund të shtosh fara chia ose farë liri.
+        Është e rëndësishme të përdorësh fruta natyrale dhe të shmangësh sheqerin e shtuar për të mbajtur dietën të shëndetshme.</p>
+      <button class="read-more">Mëso më shumë</button>
+    </li>
+    <li>
+      <strong>Ujë kokosi</strong>
+      <p class="more text" style="display:none;">
+      Në dietë, uji i kokosit mund të përdoret si pije freskuese, por gjithmonë me masë pasi përmban edhe sheqerna natyralë.
+       Mund ta përdorësh si bazë për smoothie, si pije pas ushtrimeve, ose thjesht ta pish vetë për hidratim.</p>
+      <button class="read-more">Mëso më shumë</button>
+    </li>
+  </ul>
+</section>
+
+
+  <!-- 4. Dieta për Gjendje Shëndetësore -->
+  <section id="healthDiets" class="section">
+  <h2>Dieta për Gjendje Shëndetësore</h2>
+
+  <p class="details" style="display:none;">
+    Dieta duhet të përshtatet individualisht për çdo gjendje shëndetësore. Ja disa rekomandime për sëmundjet më të zakonshme: <br><br>
+
+    <strong>Diabetikët:</strong> Duhet të shmangin sheqernat e thjeshta dhe të përqendrohen në fibra, proteina dhe karbohidrate me indeks glicemik të ulët. <br><br>
+
+    <strong>Personat me hipertension:</strong> Duhet të kufizojnë kripën, yndyrnat e ngopura dhe të rrisin konsumimin e frutave, perimeve dhe ushqimeve me kalium të lartë. <br><br>
+
+    <strong>Alergjitë ushqimore:</strong> Eliminimi i plotë i alergjenëve dhe përdorimi i zëvendësimeve të sigurta janë çelësi për shëndetin. <br><br>
+
+    <strong>Sëmundjet e zemrës:</strong> Dieta duhet të jetë e pasur me yndyrna të shëndetshme si ato në peshk, arra dhe vaj ulliri, dhe të ketë pak kripë dhe sheqer. <br><br>
+
+    <strong>Osteoporoza:</strong> Konsumimi i kalciumit dhe vitaminës D është i domosdoshëm për forcimin e kockave. Burime të mira janë qumështi, kosri, dhe perimet me gjethe të gjelbra. <br><br>
+
+    <strong>Problemet me mëlçinë:</strong> Duhet të shmangen yndyrnat e ngopura, alkooli dhe ushqimet shumë të përpunuara, ndërsa të preferohen perimet, drithërat integrale dhe proteina të lehta si peshku. <br><br>
+
+    <strong>Gastriti dhe ulçera:</strong> Duhet të shmangen ushqimet shumë të nxehta, të acideve, kafeina dhe alkooli. Preferohen ushqimet e lehta dhe të freskëta. <br><br>
+
+    <strong>Sëmundjet e veshkave:</strong> Kufizimi i kripës dhe proteinave të tepërta, si dhe konsumimi i mjaftueshëm i ujit është shumë i rëndësishëm për mirëfunksionimin e veshkave. <br><br>
+
+    Për çdo gjendje shëndetësore, këshillohet konsultimi me një specialist dietolog për një plan të personalizuar.
+  </p>
+
+  <button id="healthDietsBtn" class="read-more">Mëso më shumë</button>
+</section>
+
+
+
+  <!-- 5. Vitamina dhe Minerale -->
+
+<section id="vitaminsMinerals" class="section">
+  <h2 class="section-title">Vitamina & Minerale të Rëndësishme</h2>
+  <button id="vitaminsToggleBtn" class="toggle-btn">Mëso më shumë</button>
+  <p id="vitaminsText" style="display: none;">
+    <strong>Vitamina C:</strong> Forcon sistemin imunitar dhe ndihmon në shërimin e plagëve. <br>
+    <strong>Hekuri:</strong> Ndihmon në prodhimin e qelizave të kuqe të gjakut dhe energjisë. <br>
+    <strong>Kalciumi:</strong> Forcon kockat dhe dhëmbët për një strukturë të fortë. <br>
+    <strong>Magnesi:</strong> Relakson muskujt dhe përmirëson funksionin nervor. <br>
+    <strong>Vitamina D:</strong> Nxit absorbimin e kalciumit dhe përforcon imunitetin. <br>
+    <strong>Vitamina B12:</strong> Mbështet prodhimin e energjisë dhe funksionin e trurit. <br>
+    <strong>Zinku:</strong> Forcon mbrojtjen imune dhe ndihmon në shërimin e plagëve. <br>
+    <strong>Bakri:</strong> Ndihmon në prodhimin e kolagjenit dhe shëndetin e lëkurës. <br>
+    <strong>Vitamina A:</strong> Mbështet shikimin dhe rritjen e qelizave.
+  </p>
+</section>
+
+
+
+
+  <!-- 8. Historia e Dietës -->
+ <section id="dietHistory" class="section">
+  <h2>Historia e Dietës</h2>
+  <p>Këtu mund të shikosh dhe menaxhosh regjistrimet e dietës tënde ditore.</p>
+
+  <div class="diet-entries">
+    <article class="diet-entry">
+      <h3>Data: 2025-05-30</h3>
+      <p>Kalori: 1800 kcal | Proteinë: 120g | Yndyrna: 60g | Karbohidrate: 200g</p>
+      <button class="delete-entry">Fshij</button>
+    </article>
+
+    <article class="diet-entry">
+      <h3>Data: 2025-05-29</h3>
+      <p>Kalori: 1700 kcal | Proteinë: 110g | Yndyrna: 55g | Karbohidrate: 210g</p>
+      <button class="delete-entry">Fshij</button>
+    </article>
+  </div>
+
+  <button id="clearDietHistory" class="clear-btn">Fshij të gjitha regjistrimet</button>
+</section>
+
+  <!-- 9. Receta të Shëndetshme -->
+  <section id="receta" class="section">
+  <h2>Receta të Shëndetshme</h2>
+  <p>Shiko dhe ruaj receta ushqimore të shëndetshme dhe të shijshme.</p>
+
+  <div class="recipe-container">
+    <article class="recipe-card">
+      <h3>Salatë me Avokado dhe Kastravec</h3>
+      <p class="short-text">Një sallatë freskuese me përbërës natyral dhe shumë vitamina.</p>
+      <p class="full-text" style="display:none;">
+        Kjo sallatë përfshin avokado të pjekur, kastravec të freskët, limon, vaj ulliri ekstra i virgjer dhe majdanoz. Përgatitja është e thjeshtë: priten të gjithë përbërësit dhe përzihen me kujdes. Është ideale për ditët e nxehta verore dhe ndihmon në përmirësimin e tretjes.
+      </p>
+      <button class="toggle-text-btn">Mëso më shumë</button>
+    </article>
+
+    <article class="recipe-card">
+      <h3>Smoothie me Fruta dhe Spinaq</h3>
+      <p class="short-text">Një pije e shëndetshme për energji të menjëhershme.Ndikon ne metabolizmin e shpejte!</p>
+      <p class="full-text" style="display:none;">
+        Përbërësit kryesorë përfshijnë banane, spinaq të freskët, mollë, dhe qumësht bajamesh. Përzieni të gjithë përbërësit në blender derisa të bëhet një pije homogjene. Ky smoothie është i pasur me antioksidantë dhe vitamina që ju mbajnë energjik gjatë ditës.
+      </p>
+      <button class="toggle-text-btn">Mëso më shumë</button>
+    </article>
+
+    <article class="recipe-card">
+      <h3>Fileto Pule me Perime të Pjekura</h3>
+      <p class="short-text">Mënyrë e shpejtë dhe e shijshme për të konsumuar proteinë dhe fibra.</p>
+      <p class="full-text" style="display:none;">
+        Filetot e pulës piqen në furrë së bashku me perime të freskëta si karrota, kunguj dhe qepë. Përzieni erëza si rozmarinë, majdanoz dhe hudhër për një shije të veçantë. Kjo recetë është ideale për një vakt të plotë dhe të ekuilibruar.
+      </p>
+      <button class="toggle-text-btn">Mëso më shumë</button>
+    </article>
+  </div>
+</section>
+
+
+  <!-- 10. Blog -->
+ <section id="blog" class="section">
+  <h2 class="section-title">Blog</h2>
+  
+  <article class="blog-article">
+    <h3>Si të ushqehesh shëndetshëm çdo ditë</h3>
+    <button class="read-more" data-article="2">Lexo më shumë...</button>
+    <p class="full-text" style="display:none;">
+     Ushqyerja e shëndetshme është themeli i një jete të mirë dhe energjike. Për të ushqyer trupin në mënyrë të duhur çdo ditë, është e rëndësishme të përfshish në dietën tënde një gamë të larmishme ushqimesh natyrale, si fruta, perime, drithëra integrale, dhe proteina të pasura si peshku, pula dhe legumet.
+     Shmang produktet e përpunuara dhe pijet me sheqer të shtuar, pasi ato sjellin kalori të zbrazëta dhe ndikojnë keq në shëndet.
+    <button class="read-more" data-article="1">Lexo më shumë...</button>
+    </p>
+  </article>
+  
+  <article class="blog-article">
+    <h3>Ushtrimet që transformojnë trupin tuaj</h3>
+    <button class="read-more" data-article="2">Lexo më shumë...</button>
+    <p class="full-text" style="display:none;">
+    Ushtrimet fizike janë çelësi për të ndërtuar një trup të shëndetshëm dhe të fortë. Disa lloje aktivitetesh janë veçanërisht efektive për transformim të trupit, duke ndihmuar në djegien e yndyrës, tonifikimin e muskujve dhe përmirësimin e qëndrueshmërisë. 
+    Ushtrimet kardio, si vrapimi, ecja e shpejtë apo çiklizmi, ndihmojnë në djegien e kalorive dhe përmirësojnë funksionin e zemrës.
+     Shtimi i ushtrimeve me peshë, si ngritja e peshave apo përdorimi i rezistencës, ndihmon në ndërtimin e muskujve dhe rrit metabolizmin.
+    </p>
+  </article>
+  
+  <article class="blog-article">
+    <h3>Stili i jetesës dhe ndikimi në mirëqenie</h3>
+    <button class="read-more" data-article="3">Lexo më shumë...</button>
+    <p class="full-text" style="display:none;">
+    Stili i jetesës përfshin mënyrën se si ne jetojmë çdo ditë, përfshirë ushqimin, aktivitetin fizik, pushimin dhe menaxhimin e stresit. 
+    Ky stil ka një ndikim të madh në shëndetin tonë dhe mirëqenien e përgjithshme. Një stil jetese i shëndetshëm, që përfshin ushqim të balancuar dhe aktivitet të rregullt fizik, ndihmon në parandalimin e sëmundjeve kronike si diabeti, sëmundjet e zemrës dhe obeziteti.
+    Gjithashtu, mënyra si menaxhojmë stresin dhe sa mirë flimë ndikon në energjinë dhe humorin tonë. Kujdesi për veten dhe adoptimi i zakoneve të mira sjell përfitime afatgjata për trupin dhe mendjen.
+    Prandaj, ndryshimet e vogla në stilin e jetesës mund të bëjnë një ndryshim të madh në mirëqenien tonë.
+    </p>
+  </article>
+  
+  <article class="blog-article">
+    <h3>Ushqimet që duhet të shmangësh</h3>
+    <button class="read-more" data-article="4">Lexo më shumë...</button>
+    <p class="full-text" style="display:none;">
+      Disa ushqime mund të ndikojnë negativisht në shëndetin dhe mirëqenien tënde, prandaj është mirë t’i shmangësh ose të konsumosh me kujdes.
+     Ushqimet shumë të përpunuara, që përmbajnë sheqer të shtuar, yndyra trans dhe kripë në sasi të larta, mund të rrisin rrezikun për sëmundje të zemrës, diabet dhe obezitet. Pijet me sheqer, ushqimet e shpejta, ëmbëlsirat dhe produktet e skuqura janë shembuj të ushqimeve që duhet të kufizohen.
+    </p>
+  </article>
+</section>
+ <!-- FAQ -->
+ <section id="faqSection" class="section">
+  <h2>Pyetje të Shpeshta rreth Dietave</h2>
+
+  <div class="faq-item">
+    <h3 class="faq-question">Çfarë është dieta e ekuilibruar?</h3>
+    <p class="faq-answer" style="display: none;">
+      Dieta e ekuilibruar përfshin konsumimin e sasisë së duhur të karbohidrateve, proteinave, yndyrnave, vitaminave dhe mineraleve për një shëndet optimal.
+    </p>
+  </div>
+
+  <div class="faq-item">
+    <h3 class="faq-question">Sa ujë duhet të pij gjatë ditës?</h3>
+    <p class="faq-answer" style="display: none;">
+      Rekomandohet të pini rreth 2 litra ujë në ditë, por kjo varet edhe nga aktiviteti fizik dhe kushtet klimatike.
+    </p>
+  </div>
+
+  <div class="faq-item">
+    <h3 class="faq-question">A është e nevojshme të numëroj kaloritë?</h3>
+    <p class="faq-answer" style="display: none;">
+      Numërimi i kalorive mund të ndihmojë në menaxhimin e peshës, por gjithmonë është mirë të fokusoheni edhe në cilësinë e ushqimit.
+    </p>
+  </div>
+
+  <div class="faq-item">
+    <h3 class="faq-question">Çfarë role kanë proteinat në dietë?</h3>
+    <p class="faq-answer" style="display: none;">
+      Proteinët janë të rëndësishme për riparimin e indeve, ndërtimin e muskujve dhe funksionimin e përgjithshëm të trupit.
+    </p>
+  </div>
+
+  <div class="faq-item">
+    <h3 class="faq-question">A duhet të shmang yndyrnat për të humbur peshë?</h3>
+    <p class="faq-answer" style="display: none;">
+      Jo të gjitha yndyrnat janë të këqija. Yndyrnat e shëndetshme si ato të avokados dhe arrave janë të rëndësishme në dietë.
+    </p>
+  </div>
+
+  <div class="faq-item">
+    <h3 class="faq-question">Sa vakte duhet të kem në ditë?</h3>
+    <p class="faq-answer" style="display: none;">
+      Numri i vakteve ndryshon, por zakonisht 3 vakte kryesore dhe 1-2 snacks të shëndetshme janë të rekomanduara.
+    </p>
+  </div>
+
+  <div class="faq-item">
+    <h3 class="faq-question">Si ndikojnë karbohidratet në energjinë time?</h3>
+    <p class="faq-answer" style="display: none;">
+      Karbohidratet janë burimi kryesor i energjisë për trupin dhe duhet të përzgjidhen nga burime komplekse si drithërat integrale.
+    </p>
+  </div>
+
+  <div class="faq-item">
+    <h3 class="faq-question">A mund të kem një dietë vegane dhe të jem i shëndetshëm?</h3>
+    <p class="faq-answer" style="display: none;">
+      Po, dieta vegane mund të jetë shumë e shëndetshme, por duhet të planifikohet mirë për të siguruar të gjitha nutrientët e nevojshëm.
+    </p>
+  </div>
+<!-- Këshilla Ditore -->
+  <section id="dailyTips" class="section">
+    <h2>Këshilla Ditore</h2>
+    <p id="tipText">Loading...</Loading></p>
+  </section>
+
+</section>
+<section id="rrethNesh" class="rreth-nesh">
+  <div class="container">
+    <h2>Rreth Nesh</h2>
+    <p>
+      FitLife është platforma juaj e besueshme për të ndjekur stilin e jetesës së shëndetshme.  
+      Ne ofrojmë mjete dhe burime të avancuara për dieta, ushtrime, dhe ndjekjen e progresit tuaj për të arritur qëllimet e shëndetit.
+    </p>
+    <p>
+      Ekipi ynë është i përkushtuar të ju ndihmojë të jetoni më mirë, duke dhënë informacione të sakta dhe mbështetje të vazhdueshme për rrugëtimin tuaj drejt mirëqenies.
+    </p>
+  </div>
+</section>
+  <footer>
+  <div class="footer-content">
+    <p>© 2025 FitLife. Të gjitha të drejtat e rezervuara.</p>
+    <p>Na ndiqni në:
+      <a href="#" aria-label="Facebook">Facebook</a> |
+      <a href="#" aria-label="Instagram">Instagram</a> |
+      <a href="#" aria-label="Twitter">Twitter</a>
+    </p>
+  </div>
+</footer>
+
+
+<script src="script.js"></script>
+</body>
+</html>
+
+</body>
+
+</body>
+</html>
