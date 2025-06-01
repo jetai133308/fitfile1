@@ -1,0 +1,555 @@
+.navbar {
+  background-color: #007BFF;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 1.8rem;
+}
+
+.nav-main {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.nav-main li a,
+.nav-main button {
+  color: rgb(3, 2, 2);
+  text-decoration: none;
+  background: none;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.nav-main button:hover,
+.nav-main li a:hover {
+  color: #0a0a08;
+}
+
+/* Dropdown content - fillimisht i fshehur */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #ffffff;
+  padding: 1rem 1.5rem;
+  margin-top: 0.5rem;
+  border-radius: 5px;
+  color: rgb(0, 0, 0);
+  min-width: 200px;
+  z-index: 1000;
+}
+
+/* Dropdown content brenda ka ul list */
+.dropdown-content ul {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 0.5rem;
+}
+
+.dropdown-content ul li {
+  margin: 0.5rem 0;
+}
+
+.dropdown-content ul li a {
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+}
+
+.dropdown-content ul li a:hover {
+  color: #000000;
+}
+
+/* Stili bazë */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background-color: #f0f0f0;
+  color: #333;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffffff;
+  padding: 0.75rem 1.5rem;
+  color: rgb(196, 249, 220);
+}
+
+.logo img {
+  height: 120px; /* përshtate sipas dëshirës */
+  width: auto;
+  cursor: pointer;
+  display: block;
+}
+
+/* Nëse don me pak hapësirë rreth logos */
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+/* Hero */
+.hero {
+  font-style: oblique;
+  padding: 2rem;
+  text-align: center;
+  background-color: #fbfbfb;
+}
+.hero-img {
+  max-width: 100%;
+  height: auto;
+  margin-top: 1rem;
+  border-radius: 8px;
+}
+
+/* Seksionet */
+.section {
+  padding: 2rem;
+  max-width: 900px;
+  margin: 20px auto;
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.section h2 {
+  color: #2c3e50;
+  margin-bottom: 15px;
+  font-weight: 700;
+  border-bottom: 2px solid #27ae60;
+  padding-bottom: 8px;
+}
+.section input[type="number"],
+.section select,
+.section textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 6px;
+  margin-bottom: 15px;
+  border: 1px solid #ffffff;
+  border-radius: 6px;
+  font-size: 1rem;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease;
+}
+.section input[type="number"]:focus,
+.section select:focus,
+.section textarea:focus {
+  border-color: #27ae60;
+  outline: none;
+}
+.section button {
+  background-color: #27ae60;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.section button:hover {
+  background-color: #219150;
+}
+.section table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+  font-size: 0.95rem;
+}
+.section table th,
+.section table td {
+  border: 1px solid #ddd;
+  padding: 10px 15px;
+  text-align: left;
+}
+.section table th {
+  background-color: #27ae60;
+  color: white;
+}
+#calorieResult,
+#dietSuggestionText {
+  font-style: italic;
+  color: #34495e;
+  margin-top: 10px;
+}
+
+/* Inpute dhe butona të përbashkët */
+input, select, button {
+  padding: 0.5rem;
+  margin: 0.5rem 0;
+  width: 100%;
+  box-sizing: border-box;
+}
+button {
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  border-radius: 4px;
+}
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Modal */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 10;
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.6);
+}
+.modal-content {
+  background-color: #fff;
+  margin: 10% auto;
+  padding: 1rem;
+  width: 80%;
+  max-width: 600px;
+  border-radius: 8px;
+  position: relative;
+}
+.close {
+  position: absolute;
+  top: 0.5rem;
+  right: 1rem;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+/* Ushtrimet */
+.exercise-item {
+  text-align: center;
+}
+.exercise-item img {
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+}
+.exercise-item p {
+  margin-top: 0.5rem;
+  font-weight: 600;
+}
+#exerciseContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+/* Seksioni motivues */
+.motivational-section {
+  background-color: #f7efef;
+  padding: 2rem 1rem;
+  text-align: center;
+  margin-top: 0;
+}
+.motivational-text {
+  color: #716c6c;
+  font-style: italic;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  max-width: 800px;
+  margin: 0 auto;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.4);
+}
+
+/* Login & Register */
+#login, #register {
+  max-width: 400px;
+  margin: 20px auto;
+  padding: 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background: #f9f9f9;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+#login h2, #register h2 {
+  text-align: center;
+  margin-bottom: 15px;
+  color: #333;
+}
+form {
+  display: flex;
+  flex-direction: column;
+}
+input[type="text"],
+input[type="password"] {
+  padding: 10px;
+  margin-bottom: 12px;
+  border: 1px solid #aaa;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+.message {
+  margin-top: 10px;
+  font-weight: 600;
+  text-align: center;
+}
+
+/* Footer */
+footer {
+  background-color: #aef8ca;
+  color: rgb(6, 3, 3);
+  padding: 1rem;
+  text-align: center;
+  font-size: 0.9rem;
+  margin-top: 2rem;
+  border-radius: 0 0 8px 8px;
+}
+footer a {
+  color: #000000;
+  text-decoration: none;
+  margin: 0 0.3rem;
+}
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* Profili */
+#userProfile {
+  max-width: 450px;
+  margin: 20px auto;
+  background: #f9f9f9;
+  border-radius: 8px;
+  padding: 15px 20px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.1);
+}
+#userProfile h2 {
+  margin-bottom: 10px;
+  color: #333;
+}
+#userProfile label {
+  font-weight: 500;
+  color: #444;
+}
+#userProfile input[type="text"],
+#userProfile textarea {
+  width: 100%;
+  padding: 8px 10px;
+  margin-bottom: 12px;
+  border: 1.5px solid #ddd;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+#saveProfileBtn {
+  background: #4caf50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 25px;
+  font-weight: 600;
+  cursor: pointer;
+}
+#saveProfileBtn:hover {
+  background: #45a045;
+}
+#profileMessage {
+  margin-top: 8px;
+  color: #28a745;
+}
+
+/* Plani javor */
+.week-days {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 20px;
+}
+.day-card {
+  background: #f9f9f9;
+  border: 1px solid #ddd;
+  padding: 16px;
+  border-radius: 12px;
+  width: 280px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+.day-card h3 {
+  color: #16a34a;
+  text-align: center;
+}
+.select-day {
+  background-color: #16a34a;
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.select-day:hover {
+  background-color: #15803d;
+}
+
+/* Kalendari Ushqim & Ushtrime */
+#foodExerciseCalendar {
+  max-width: 480px;
+  margin: 30px auto;
+  background: #fff;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+#foodExerciseCalendar h2 {
+  margin-bottom: 15px;
+}
+#calendarDate,
+#calendarMeals,
+#calendarExercises {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  border: 1.5px solid #ccc;
+}
+#calendarDate:focus,
+#calendarMeals:focus,
+#calendarExercises:focus {
+  border-color: #4caf50;
+  outline: none;
+}
+#saveCalendarBtn {
+  background: #4caf50;
+  color: white;
+  border: none;
+  padding: 10px 22px;
+  border-radius: 25px;
+  cursor: pointer;
+  font-weight: 600;
+}
+#saveCalendarBtn:hover {
+  background: #45a045;
+}
+#calendarMessage {
+  margin-top: 10px;
+  color: #28a745;
+}
+
+/* Gjurmues Progresi */
+#progressTracker {
+  max-width: 600px;
+  margin: 40px auto;
+}
+#progressTable {
+  width: 100%;
+  border-collapse: collapse;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+#progressTable thead {
+  background-color: #4caf50;
+  color: white;
+}
+#progressTable th, #progressTable td {
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+  text-align: center;
+}
+#progressTable tbody tr:nth-child(even) {
+  background-color: #f8f8f8;
+}
+
+/* Këshilla Ditore */
+#dailyTips {
+  max-width: 400px;
+  margin: 30px auto;
+  background-color: #e8f5e9;
+  border-left: 5px solid #4caf50;
+  padding: 20px 25px;
+  font-style: italic;
+  font-size: 1.1rem;
+  color: #2e7d32;
+  border-radius: 6px;
+  text-align: center;
+}
+
+/* FAQ */
+#faqSection {
+  max-width: 600px;
+  margin: 40px auto;
+}
+.faq-item {
+  border-bottom: 1px solid #ddd;
+  padding: 12px 0;
+}
+.faq-item h3 {
+  font-size: 1.1rem;
+  color: #4caf50;
+  cursor: pointer;
+}
+.faq-item h3:hover {
+  color: #388e3c;
+}
+.faq-item p {
+  display: none;
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.4;
+}
+
+/* Feedback */
+#feedbackForm {
+  max-width: 450px;
+  margin: 30px auto 50px auto;
+  background: #f0f4f8;
+  padding: 20px 25px;
+  border-radius: 8px;
+  box-shadow: 0 0 12px rgba(0,0,0,0.05);
+}
+#feedbackForm textarea {
+  width: 100%;
+  min-height: 90px;
+  padding: 10px 12px;
+  border: 1.5px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  resize: vertical;
+}
+#feedbackForm textarea:focus {
+  border-color: #4caf50;
+}
+#feedbackForm button {
+  margin-top: 12px;
+  width: 100%;
+  background-color: #4caf50;
+  border: none;
+  padding: 11px 0;
+  color: white;
+  font-weight: 600;
+  font-size: 1.1rem;
+  border-radius: 6px;
+}
+.rreth-nesh {
+  background-color: #f8f9fa; /* ngjyrë e lehtë sfondi */
+  padding: 4rem 2rem;
+  text-align: center;
+  color: #333;
+  font-family: Arial, sans-serif;
+}
+
+.rreth-nesh .container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.rreth-nesh h2 {
+  font-size: 3.0 rem;
+  margin-bottom: 1rem;
+  color: #000000; /* Ngjyra e logos */
+}
+
+.rreth-nesh p {
+  font-size: 3600 rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
